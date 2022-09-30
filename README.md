@@ -6,7 +6,7 @@
 ## 1.顺序表 List_order(√)
 ## 2.单向链表 List_sig（√）
 ## 3.双向链表 List_dou（√）
-## 4.队列 Queue
+## 4.队列 Queue（√）
 ## 5.栈 Stack（√）
 ## 6.二叉树
 ## 7.串（字符串匹配算法KMP）
