@@ -3,18 +3,24 @@
 //
 
 #include <stdio.h>
-#include "argcs.h"
 
+
+void copy_str(char *from, char *to){
+    for(; *from != '\0'; from++, to++){
+        *to = *from;
+    }
+    *to = '\0';
+}
 
 void test1(){
-    /*
-     * 可变参数
-     */
-    int n;
-    scanf("%d", &n);
-    kbargc(5, "nihao", "shaogy", "wo", "laizi", "kuailexingqiu");
-    printf("Average of 2, 3, 4, 5 = %f\n", average(4, 2,3,4,5));
-    printf("Average of 5, 10, 15 = %f\n", average(3, 5,10,15));
+    char a[] = "I am a boy";
+    char *b;
+    printf("%x, %x\n", &a, &b);
+    copy_str(a, b);
+    printf("a is : %s\n", a);
+    printf("b is : %s\n", b);
+    return;
+
 }
 int main()
 {
