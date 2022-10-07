@@ -3,7 +3,7 @@
 //
 
 #include <stdio.h>
-#include "Tree/b_ree.h"
+#include "b_ree.h"
 #include <time.h>
 #include "stdlib.h"
 #define MAX_N 20
@@ -27,7 +27,7 @@ void test1(){
 int main()
 {
     //test1();
-    BTree tree= init_b_tree();
+    BTree *tree= init_b_tree();
     if(tree == NULL){
         printf("create tree failed\n");
         return 1;
@@ -43,19 +43,19 @@ int main()
             case 1:
             case 2:
             case 3:{
-                tree.root = insert_node(tree.root, val);
-                printf("insert a val in b_tree\n");
+                tree->root = insert_node(tree->root, val);
+                printf("insert a val %d in b_tree\n", val);
             }
                 break;
-            case 4:{
+            case 10:{
                 printf("delete a val in b_tree\n");
-                tree.root = delete_node(tree.root, val);
+                tree->root = delete_node(tree->root, val);
             }
                 break;
         }
-        pre_in_order(tree.root), printf("\n");
-        mid_in_order(tree.root), printf("\n");
-        pre_in_order(tree.root), printf("\n");
+        pre_in_order(tree->root), printf("\n");
+        mid_in_order(tree->root), printf("\n");
+        pre_in_order(tree->root), printf("\n");
     }
     free_tree(tree);
     return 0;
